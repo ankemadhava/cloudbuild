@@ -1,4 +1,4 @@
-# NGINX 
+# NGINX 1
 Basic nginx index html webpage creation
 
 This repository contains files to run a sample application on nginx and demonstrates a CI/CD process in action.
