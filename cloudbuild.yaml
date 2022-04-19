@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', '--tag=gcr.io/cloud-347204/helloworld:v1', '.']
+  args: ['build', '-t', 'gcr.io/cloud-347204/helloworld:v1', '.']
   
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/cloud-347204/helloworld:v1']
