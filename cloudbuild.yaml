@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/cloud-347204/helloworld:latest', '.']
+  args: ['build', '-t', 'gcr.io/cloud-347204/helloworld:v1', '.']
   
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/cloud-347204/helloworld:latest']
+  args: ['push', 'gcr.io/cloud-347204/helloworld:v1']
  
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'helloworld', '--image', 'gcr.io/cloud-347204/helloworld', '--port', '80', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
