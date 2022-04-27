@@ -3,10 +3,10 @@ steps:
   args: ['build', '-t', 'gcr.io/cloud-347204/nginx:latest', '.']
   
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/cloud-347204/helloworld:v1']
+  args: ['push', 'gcr.io/cloud-347204/nginx:latest']
  
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'helloworld', '--image', 'gcr.io/cloud-347204/helloworld', '--port', '80', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
+  args: ['beta', 'run', 'deploy', 'nginx', '--image', 'gcr.io/cloud-347204/nginx', '--port', '80', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
 images:
- - 'gcr.io/cloud-347204/helloworld:latest'
+ - 'gcr.io/cloud-347204/nginx:latest'
 
